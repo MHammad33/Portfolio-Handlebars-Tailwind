@@ -4,7 +4,8 @@
   "description": "Porfolio made using Templating engine handlbars and styled with Tailwind CSS.",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon index.js"
+    "start": "npx nodemon index.js",
+    "Tailwind": "npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }

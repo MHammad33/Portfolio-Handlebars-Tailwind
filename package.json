@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-handlebars-tailwind",
+  "version": "1.0.0",
+  "description": "Porfolio made using Templating engine handlbars and styled with Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "author": "M Hammad Afzal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  }
+}

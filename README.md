@@ -1,11 +1,15 @@
-# Portfolio Website with Handlebars and Tailwind CSS
+# Portfolio Website with Handlebars, Tailwind CSS, Node.js, and Express.js
+
+## Project Name: Portfolio-Handlebars-Tailwind
 
 ### Description
-This repository contains the code for a personal portfolio website built using the Handlebars templating engine and styled with Tailwind CSS. The portfolio showcases your skills, projects, and provides a brief overview of your background.
+This repository contains the code for a personal portfolio website built using the Handlebars templating engine and styled with Tailwind CSS. The portfolio showcases your skills, projects, and provides a brief overview of your background. The backend is powered by Node.js and Express.js for handling endpoints and server functionality.
 
 ### Technologies Used
 - Handlebars (templating engine)
 - Tailwind CSS (styling)
+- Node.js
+- Express.js
 - HTML5
 - CSS3
 - JavaScript
@@ -14,6 +18,7 @@ This repository contains the code for a personal portfolio website built using t
 - Responsive design for various screen sizes.
 - Dynamic content through Handlebars templates.
 - Modern and clean UI with Tailwind CSS styling.
+- Backend powered by Node.js and Express.js.
 
 ### Setup Instructions
 
@@ -43,9 +48,11 @@ This repository contains the code for a personal portfolio website built using t
 ### Folder Structure
 
 - **/src:** Contains the source code for the project.
-    - **/views:** Handlebars templates (Styled with Tailwind CSS).
+    - **/views:** Handlebars templates.
     - **/public:** Static assets (images, stylesheets, etc.).
     - **/js:** JavaScript files.
+    - **/styles:** Stylesheets (Tailwind CSS).
+    - **/routes:** Express.js route handlers.
 
 - **/build:** Compiled and minified files for deployment.
 
@@ -53,6 +60,7 @@ This repository contains the code for a personal portfolio website built using t
 
 - Update the content in the Handlebars templates (`/src/views`) to personalize your portfolio.
 - Modify the styles in Tailwind CSS files (`/src/styles`) to match your preferences.
+- Implement backend functionality in the Express.js route handlers (`/src/routes`) for dynamic content.
 
 ### Deployment
 

@@ -17,5 +17,5 @@ hLinks.forEach(link => {
 });
 
 moon.addEventListener("click", () => {
-    body.classList.toggle("dark")
+    body.classList.toggle("dark");
 });

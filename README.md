@@ -56,8 +56,9 @@ This repository contains the code for a personal portfolio website built using t
 - **/public:** Static assets (images, stylesheets, etc.).
 - **/src:** Contains the source code for the project.
 
-  - **/views:** Handlebars templates.
   - **/routes:** Express.js route handlers.
+  - **/views:** Handlebars templates.
+  - **App.css:** Default styling for the project.
   - **App.js:** Entry point of our Project where all the backend logic is stored.
 
 - **/build:** Compiled and minified files for deployment.

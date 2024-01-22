@@ -1,1 +1,37 @@
-<h1>Services Page</h1>
+<!--  Services Section -->
+<div id="services" class="dark:bg-slate-900 px-3 py-24 my-16">
+	<div class="container mx-auto">
+		<!-- top -->
+		<div class="flex flex-col gap-3 items-center">
+			<h1 class="text-indigo-600 font-bold 2xl:text-5xl">SERVICES</h1>
+			<h1 class="text-3xl dark:text-white 2xl:text-6xl">
+				What do I offer?
+			</h1>
+			<p class="w-1/2 text-center text-gray-400 2xl:text-3xl">
+				{{servicesDescription}}
+			</p>
+		</div>
+		<!-- bottom -->
+		<div class="flex p-5 flex-wrap sm:p-0 2xl:p-10">
+			<!-- cards -->
+			{{#each serviceCards}}
+				<div
+					class="w-full my-3 md:my-10 md:w-4/12 shadow-xl rounded-lg p-5 flex flex-col gap-3 2xl:p-10"
+				>
+					<img class="w-10 2xl:w-[5rem]" src="{{this.logoPath}}" alt="" />
+					<h1 class="font-medium dark:text-white 2xl:text-4xl">
+						{{this.name}}
+					</h1>
+					<p class="text-gray-400 2xl:text-3xl">
+						{{this.desc}}
+					</p>
+					<a
+						class="text-indigo-600 font-semibold text-sm 2xl:text-3xl"
+						href=""
+					>Read More</a>
+				</div>
+			{{/each}}
+
+		</div>
+	</div>
+</div>

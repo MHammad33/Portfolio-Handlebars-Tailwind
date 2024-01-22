@@ -12,6 +12,7 @@ app.use(express.static(staticPath));
 // Set templating engine
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
+app.set("view options", { layout: "layouts/main" });
 
 // Set path for partials for handlebars
 hbs.registerPartials(partialsPath);

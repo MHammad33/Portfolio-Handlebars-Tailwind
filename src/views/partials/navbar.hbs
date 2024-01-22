@@ -1,0 +1,55 @@
+<!-- Navbar -->
+<nav class="z-10 w-full px-5 fixed top-0 bg-white dark:bg-slate-900">
+	<div class="container mx-auto py-5 flex justify-between items-center">
+		<div class="flex items-center gap-2">
+			<img
+				class="h-8 w-8 2xl:h-12 2xl:w-12"
+				src="./img/logo.png"
+				alt="Profile"
+			/>
+			<span
+				class="font-bold text-2xl text-indigo-900 dark:text-white 2xl:text-5xl"
+			>Portfit.</span>
+		</div>
+		<ul
+			class="hidden md:flex dark:text-gray-100 space-x-10 text-gray-600 font-bold text-sm uppercase 2xl:text-3xl"
+		>
+			<li class="hover:text-gray-500">
+				<a href="/">homepage</a>
+			</li>
+			<li class="hover:text-gray-500">
+				<a href="about">about me</a>
+			</li>
+			<li class="hover:text-gray-500">
+				<a href="services">services</a>
+			</li>
+			<li class="hover:text-gray-500">
+				<a href="works">works</a>
+			</li>
+			<li class="hover:text-gray-500">
+				<a href="contact">contact</a>
+			</li>
+		</ul>
+		<img
+			id="moon"
+			class="hidden md:block w-5 cursor-pointer"
+			src="./img/moon.png"
+			alt=""
+		/>
+		<div id="hamburger" class="space-y-1 md:hidden z-20">
+			<div class="w-6 h-0.5 bg-black dark:bg-gray-100"></div>
+			<div class="w-6 h-0.5 bg-black dark:bg-gray-100"></div>
+			<div class="w-6 h-0.5 bg-black dark:bg-gray-100"></div>
+		</div>
+		<ul
+			id="menu"
+			class="hidden bg-indigo-900 absolute top-0 left-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center uppercase"
+		>
+			<li class="hLinks"><a href="/">home</a></li>
+			<li class="hLinks"><a href="about">about me</a></li>
+			<li class="hLinks"><a href="services">services</a></li>
+			<li class="hLinks"><a href="work">works</a></li>
+			<li class="hLinks"><a href="contact">contact</a></li>
+		</ul>
+	</div>
+</nav>

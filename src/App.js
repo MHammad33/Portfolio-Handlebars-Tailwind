@@ -19,11 +19,11 @@ hbs.registerPartials(partialsPath);
 
 // Setting Routes
 const aboutRoute = require("./routes/About");
-const workRoute = require("./routes/Work");
+const worksRoute = require("./routes/Works");
 const contactRoute = require("./routes/Contact");
 const servicesRoute = require("./routes/Services");
 app.use("/about", aboutRoute);
-app.use("/work", workRoute);
+app.use("/works", worksRoute);
 app.use("/contact", contactRoute);
 app.use("/services", servicesRoute);
 

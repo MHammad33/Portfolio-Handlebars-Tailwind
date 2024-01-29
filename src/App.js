@@ -3,8 +3,12 @@ const hbs = require("hbs");
 const path = require("path");
 const PORT = 8080;
 const app = express();
+const dbConnect = require("./utils/db");
 const staticPath = path.join(__dirname, "../public");
 const partialsPath = path.join(__dirname, "/views/partials");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Set static path
 app.use(express.static(staticPath));
@@ -27,8 +31,10 @@ app.use("/works", worksRoute);
 app.use("/contact", contactRoute);
 app.use("/services", servicesRoute);
 
-app.get("/", (req, res) => {
-    res.render("index");
+dbConnect().then(() => {
+    app.get("/", (req, res) => {
+        res.render("index");
+    });
 });
 
 app.listen(PORT, () => console.log("Server running on port " + PORT));

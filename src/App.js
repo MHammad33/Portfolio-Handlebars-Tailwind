@@ -1,5 +1,6 @@
 const express = require("express");
 const hbs = require("hbs");
+const methodOverride = require('method-override');
 const path = require("path");
 const PORT = 8080;
 const app = express();
@@ -9,6 +10,15 @@ const partialsPath = path.join(__dirname, "/views/partials");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride(function (req, res) {
+    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+        // look in urlencoded POST bodies and delete it
+        var method = req.body._method;
+        console.log(method, req.body._method);
+        delete req.body._method;
+        return method;
+    }
+}))
 
 // Set static path
 app.use(express.static(staticPath));

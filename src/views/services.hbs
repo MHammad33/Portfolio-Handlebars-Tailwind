@@ -1,5 +1,5 @@
 <!--  Services Section -->
-<div id="services" class="dark:bg-slate-900 px-3 py-24 my-16">
+<div id="services" class="dark:bg-slate-800 px-3 py-24 my-16">
 	<div class="container mx-auto">
 		<!-- top -->
 		<div class="flex flex-col gap-3 items-center">
@@ -18,7 +18,23 @@
 				<div
 					class="w-full my-3 md:my-10 md:w-4/12 shadow-xl rounded-lg p-5 flex flex-col gap-3 2xl:p-10"
 				>
-					<img class="w-10 2xl:w-[5rem]" src="{{this.logoPath}}" alt="" />
+					<div class="flex justify-between">
+						<img class="w-10 2xl:w-[5rem]" src="{{this.logoPath}}" alt="" />
+						<div class="flex">
+							<a href="/services/updateService/{{this._id}}">
+								<i class="material-icons dark:text-red-500">edit</i>
+							</a>
+							<form
+								action="/services/api/service/delete/{{this._id}}"
+								method="post"
+							>
+								<input type="hidden" name="_method" value="DELETE" />
+								<button type="submit">
+									<i class="material-icons text-red-500">delete</i>
+								</button>
+							</form>
+						</div>
+					</div>
 					<h1 class="font-medium dark:text-white 2xl:text-4xl">
 						{{this.name}}
 					</h1>
@@ -38,7 +54,7 @@
 			>
 				<a
 					class="text-gray-700 font-semibold text-sm lg:text-xl xl:text-2xl 2xl:text-4xl"
-					href=""
+					href="/services/registerService"
 				>+ New Service</a>
 			</div>
 		</div>

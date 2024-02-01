@@ -1,39 +1,15 @@
 const express = require("express");
 const router = express.Router();
+const serviceControllers = require("../controllers/serviceControllers");
 
-const servicesDescription = "My approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience."
-
-const serviceCards = [
-    {
-        id: 1,
-        name: "React development", logoPath: "/img/icon.png", desc: "I specialize in creating interactive websites for individuals and small businesses."
-    },
-    {
-        id: 2,
-        name: "Web development", logoPath: "/img/icon.png", desc: "I specialize in creating interactive websites for individuals and small businesses."
-    },
-    {
-        id: 3,
-        name: "React development", logoPath: "/img/icon.png", desc: "I specialize in creating interactive websites for individuals and small businesses."
-    },
-];
-
-router.get("/", (req, res) => {
-    res.render("services", { servicesDescription, serviceCards });
+router.get("/", serviceControllers.services);
+router.get("/registerService", (req, res) => {
+    res.render("createService");
 });
+router.get("/updateService/:id", serviceControllers.updatePage);
+router.post("/api/service/create", serviceControllers.registerService);
+router.put("/api/service/update/:id", serviceControllers.updateService);
+router.delete("/api/service/delete/:id", serviceControllers.deleteService);
 
-router.put("/api/servicesData/:id", (req, res) => {
-    const serviceId = parseInt(req.params.id);
-    const service = serviceCards.find(s => s.id === serviceId);
-
-    if (!service) {
-        res.sendStatus(404);
-    }
-
-    const payload = req.body;
-    Object.assign(service, payload);
-
-    res.json({ updateSuccess: serviceId });
-});
 
 module.exports = router;

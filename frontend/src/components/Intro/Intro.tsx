@@ -14,7 +14,18 @@ function Intro() {
 				src="/profile.png"
 				alt=""
 			/>
-			<AutoTyping />
+			<AutoTyping
+				texts={[
+					"Hello, I'm",
+					"Hello, I'm a Software Developer",
+					"Hello, I'm a Web Developer",
+					"Hello, I'm a Mobile Developer",
+					"Hello, I'm a Full Stack Developer",
+				]}
+				typingSpeed={100}
+				backSpeed={50}
+				loop={true}
+			/>
 			<Hero />
 		</div>
 	);

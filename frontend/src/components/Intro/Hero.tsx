@@ -5,9 +5,10 @@ function Hero() {
 				Hi, I'm Hammad
 			</h1>
 			<p className="text-gray-400 2xl:text-4xl">
-				with over 10 years of experience on web design and development. Lorem
-				ipsum dolor sit amet consectetur adipisicing elit. N oumquam quo
-				provident, facere minus temporibus veniam nostrum reprehenderit nihil?
+				Full Stack Developer and Software Engineer based in Pakistan. I build
+				web applications and software solutions. I am passionate about learning
+				new technologies and building cool projects. I am currently looking for
+				new opportunities.{" "}
 			</p>
 			<a
 				className="bg-indigo-600 text-white px-3 py-2 text-xl w-fit rounded-md font-semibold 2xl:text-4xl 2xl:px-3"

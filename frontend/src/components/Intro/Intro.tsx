@@ -15,15 +15,9 @@ function Intro() {
 				alt=""
 			/>
 			<AutoTyping
-				texts={[
-					"Hello, I'm",
-					"Hello, I'm a Software Developer",
-					"Hello, I'm a Web Developer",
-					"Hello, I'm a Mobile Developer",
-					"Hello, I'm a Full Stack Developer",
-				]}
+				texts={["Software Developer", "Web Developer", "Full Stack Developer"]}
 				typingSpeed={100}
-				backSpeed={50}
+				backSpeed={30}
 				loop={true}
 			/>
 			<Hero />

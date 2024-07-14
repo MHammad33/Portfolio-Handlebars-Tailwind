@@ -1,11 +1,16 @@
-import React from "react";
 import "./App.css";
+import { About, Contact, Footer, Intro, Services, Work } from "./components";
 
 function App() {
 	return (
-		<h1 className="text-3xl font-bold underline text-amber-700">
-			Hello, Portfolio
-		</h1>
+		<>
+			<Intro />
+			<About />
+			<Services />
+			<Work />
+			<Contact />
+			<Footer />
+		</>
 	);
 }
 

@@ -41,6 +41,7 @@ function Navbar() {
 					className="hidden md:block w-5 cursor-pointer"
 					src={moon}
 					alt="Moon"
+					onClick={() => document.body.classList.toggle("dark")}
 				/>
 				<div
 					id="hamburger"

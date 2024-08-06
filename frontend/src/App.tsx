@@ -1,4 +1,3 @@
-import "./App.css";
 import { About, Contact, Footer, Intro, Services, Work } from "./components";
 
 function App() {

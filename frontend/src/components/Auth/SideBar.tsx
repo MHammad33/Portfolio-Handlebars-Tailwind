@@ -1,9 +1,21 @@
-const Sidebar = ({ sections, selectedSection, onSelectSection }) => (
+import { Section, SelectedSection } from "./Admin";
+
+interface SidebarProps {
+	sections: Section[];
+	selectedSection: string;
+	onSelectSection: (section: SelectedSection) => void;
+}
+
+const Sidebar = ({
+	sections,
+	selectedSection,
+	onSelectSection,
+}: SidebarProps) => (
 	<div className="w-60 bg-gray-800 text-white flex flex-col">
 		<div className="p-4 text-xl font-bold">Admin Panel</div>
 		<nav className="flex-1 px-2">
 			<ul>
-				{sections.map((section) => (
+				{sections?.map((section) => (
 					<li key={section._id} className="mb-1">
 						<button
 							className={`block w-full text-left p-2 rounded ${
@@ -11,7 +23,12 @@ const Sidebar = ({ sections, selectedSection, onSelectSection }) => (
 									? "bg-gray-700"
 									: "hover:bg-gray-700"
 							}`}
-							onClick={() => onSelectSection(section.section)}
+							onClick={() =>
+								onSelectSection({
+									content: section.content,
+									section: section.section,
+								})
+							}
 						>
 							{section.section}
 						</button>

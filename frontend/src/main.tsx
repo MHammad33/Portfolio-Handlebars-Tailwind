@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
 import "./index.css";
-import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./layout/Layout";
-import Admin from "./components/admin/Admin";
+import Layout from "./layout/Layout.tsx";
+import Admin from "./components/Auth/Admin.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -17,10 +17,7 @@ const router = createBrowserRouter([
 	},
 ]);
 
-const root = ReactDOM.createRoot(
-	document.getElementById("root") as HTMLElement
-);
-root.render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
 		<RouterProvider router={router} />
 	</React.StrictMode>

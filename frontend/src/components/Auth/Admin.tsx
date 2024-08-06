@@ -1,11 +1,25 @@
-import React, { useState } from "react";
-import Sidebar from "./Sidebar";
+import { useState } from "react";
+import Sidebar from "./SideBar";
 import SectionContent from "./SectionContent";
 
-const Admin = () => {
-	const [selectedSection, setSelectedSection] = useState("Introduction");
+export interface Section {
+	_id: number;
+	section: string;
+	content: string | string[];
+}
 
-	const sections = [
+export interface SelectedSection {
+	section: string;
+	content: string | string[];
+}
+
+const Admin = () => {
+	const [selectedSection, setSelectedSection] = useState<SelectedSection>({
+		section: "Introduction",
+		content: [],
+	});
+
+	const sections: Section[] = [
 		{
 			_id: 1,
 			section: "Introduction",
@@ -44,17 +58,16 @@ const Admin = () => {
 	];
 
 	const selectedSectionData = sections.find(
-		(section) => section.section === selectedSection
+		(section) => section.section === selectedSection.section
 	);
 
 	return (
 		<div className="min-h-screen flex bg-gray-100">
 			<Sidebar
 				sections={sections}
-				selectedSection={selectedSection}
+				selectedSection={selectedSection.section}
 				onSelectSection={setSelectedSection}
 			/>
-
 			<div className="flex-1 p-4">
 				{selectedSectionData && (
 					<SectionContent section={selectedSectionData} />

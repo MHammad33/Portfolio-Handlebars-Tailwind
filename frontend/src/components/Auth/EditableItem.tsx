@@ -1,4 +1,8 @@
-const EditableItem = ({ item }) => {
+type EditableItemProps = {
+	item: string;
+};
+
+const EditableItem = ({ item }: EditableItemProps) => {
 	return (
 		<div className={`p-4 rounded shadow-sm bg-blue-100`}>
 			<div className="flex justify-between items-center">

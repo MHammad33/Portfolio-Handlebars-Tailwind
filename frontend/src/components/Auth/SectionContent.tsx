@@ -1,18 +1,23 @@
+import { Section } from "./Admin";
 import EditableItem from "./EditableItem";
 
-const SectionContent = ({ section }) => (
+type SectionContentProps = {
+	section: Section;
+};
+
+const SectionContent = ({ section }: SectionContentProps) => (
 	<div className="bg-white p-4 rounded-lg shadow">
 		<div className="mb-4">
 			<h1 className="text-3xl font-bold">{section.section}</h1>
 		</div>
-		{section.section === "Services" || section.section === "Works" ? (
-			<div className="space-y-4">
+		{Array.isArray(section.content) ? (
+			<ul>
 				{section.content.map((item, index) => (
-					<EditableItem key={index} item={item} />
+					<EditableItem item={item} key={index} />
 				))}
-			</div>
+			</ul>
 		) : (
-			<p className="mb-2">{section.content}</p>
+			<p>{section.content}</p>
 		)}
 	</div>
 );
